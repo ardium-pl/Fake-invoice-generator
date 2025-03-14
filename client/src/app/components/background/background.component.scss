@@ -1,0 +1,147 @@
+:host {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    width: 100vh;
+    height: 100vh;
+    border-radius: 999px;
+    overflow: hidden;
+    filter: blur(80px);
+}
+
+.gradient {
+    width: 100%;
+    height: 100%;
+}
+
+.blue-blob {
+    top: -10vh;
+    left: 5vh;
+}
+
+.dark-blue-blob {
+    top: 10vh;
+    right: -16px;
+}
+
+.purple-blob {
+    bottom: -30vh;
+    left: 25vw;
+}
+
+.blue-gradient {
+    background: linear-gradient(to bottom right, rgba(255,178,84,0.9), rgba(255,144,51,0.7));
+}
+
+.dark-blue-gradient {
+    background: linear-gradient(to bottom right, rgba(108,148,255,0.9), rgba(15, 63, 113, 0.8));
+}
+
+.purple-gradient {
+    background: linear-gradient(to bottom right, rgb(138, 92, 246), rgba(100, 54, 181, 0.95));
+}
+
+.blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(30px);
+    z-index: 5;
+}
+
+@media screen and (max-width: 768px) {
+    .blob {
+        width: 80vh;
+        height: 80vh;
+        filter: blur(60px);
+    }
+    
+    .blue-blob {
+        top: -5vh;
+        left: 0;
+    }
+    
+    .dark-blue-blob {
+        top: 5vh;
+        right: -10px;
+    }
+    
+    .purple-blob {
+        bottom: -20vh;
+        left: 15vw;
+    }
+    
+    .blur-overlay {
+        backdrop-filter: blur(25px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .blob {
+        width: 60vh;
+        height: 60vh;
+        filter: blur(40px);
+    }
+    
+    .blue-blob {
+        top: -2vh;
+        left: -10vw;
+    }
+    
+    .dark-blue-blob {
+        top: 20vh;
+        right: -20vw;
+    }
+    
+    .purple-blob {
+        bottom: -15vh;
+        left: 10vw;
+    }
+    
+    .blur-overlay {
+        backdrop-filter: blur(20px);
+    }
+}
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .blob {
+        width: 100vw;
+        height: 100vw;
+    }
+    
+    .blue-blob {
+        top: -30vw;
+        left: -10vw;
+    }
+    
+    .dark-blue-blob {
+        top: 0;
+        right: -30vw;
+    }
+    
+    .purple-blob {
+        bottom: -30vw;
+        left: 30vw;
+    }
+}
